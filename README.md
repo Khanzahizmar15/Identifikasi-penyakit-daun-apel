@@ -2,7 +2,7 @@
 
 ### Final Project — Computer Vision  
 **Name**: Nurul Hizmar Khanza  
-**Student ID**: 2155301111  
+**NIM**: 2155301111  
 **Class**: 4 TI A  
 **Department of Informatics Engineering, Politeknik Caltex Riau**  
 **Year**: 2025

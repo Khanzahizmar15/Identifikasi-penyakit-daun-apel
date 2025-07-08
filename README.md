@@ -120,12 +120,17 @@ The trained model was successfully converted into **TensorFlow Lite** format and
 
 ### 📸 Mobile App UI Examples
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/4ef9ec6b-820c-4707-9089-17d8e9c12d35" width="200"/>
-  <img src="https://github.com/user-attachments/assets/b4d5a275-6601-49d2-8eb1-7d937a651a16" width="200"/>
-  <img src="https://github.com/user-attachments/assets/15243b01-8737-4e3d-9011-fd46397e6af3" width="200"/>
-  <img src="https://github.com/user-attachments/assets/c49d6bb7-555e-4235-ade7-d12d0f7de1ca" width="200"/>
-</div>
+<table align="center">
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/4ef9ec6b-820c-4707-9089-17d8e9c12d35" width="200"/></td>
+    <td><img src="https://github.com/user-attachments/assets/b4d5a275-6601-49d2-8eb1-7d937a651a16" width="200"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/15243b01-8737-4e3d-9011-fd46397e6af3" width="200"/></td>
+    <td><img src="https://github.com/user-attachments/assets/c49d6bb7-555e-4235-ade7-d12d0f7de1ca" width="200"/></td>
+  </tr>
+</table>
+
 
 ---
 

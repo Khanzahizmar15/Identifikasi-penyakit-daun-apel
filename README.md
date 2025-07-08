@@ -1,4 +1,3 @@
-
 🍏 Apple Leaf Disease Detection using Convolutional Neural Network (CNN)
 🎓 Final Project — Computer Vision
 Name: Nurul Hizmar Khanza

@@ -1,165 +1,168 @@
-🍏 Apple Leaf Disease Detection using Convolutional Neural Network (CNN)
-🎓 Final Project — Computer Vision
-Name: Nurul Hizmar Khanza
-NIM: 2155301111
-Class: 4 TI A
-Department: Informatics Engineering
-Institution: Politeknik Caltex Riau
-Year: 2025
+# 🍏 Apple Leaf Disease Detection using Convolutional Neural Network (CNN)
 
-📌 Background
-Apple crops are susceptible to various plant diseases, with Powdery Mildew and Rust being among the most prevalent. These conditions can severely impact the health and yield of apple trees if not detected early.
+🎓 **Final Project — Computer Vision**  
+**Name:** Nurul Hizmar Khanza  
+**NIM:** 2155301111  
+**Class:** 4 TI A  
+**Department:** Informatics Engineering  
+**Institution:** Politeknik Caltex Riau  
+**Year:** 2025  
 
-This project leverages Computer Vision and Deep Learning, specifically Convolutional Neural Networks (CNNs), to classify apple leaf images into the following categories:
+---
 
-🟢 Healthy
+## 📌 Background
 
-⚪ Powdery Mildew
+Apple crops are susceptible to various plant diseases, with **Powdery Mildew** and **Rust** being among the most prevalent. These conditions can severely impact the health and yield of apple trees if not detected early.
 
-🔴 Rust
+This project leverages **Computer Vision** and **Deep Learning**, specifically **Convolutional Neural Networks (CNNs)**, to classify apple leaf images into the following categories:
+
+- 🟢 **Healthy**
+- ⚪ **Powdery Mildew**
+- 🔴 **Rust**
 
 By offering a fast and accurate detection system, this project supports early diagnosis and timely intervention, enhancing disease management and crop protection.
 
-🎯 Project Objectives
-Develop a CNN-based image classification model to detect diseases on apple leaves.
+---
 
-Classify apple leaf images into three classes: Healthy, Powdery Mildew, and Rust.
+## 🎯 Project Objectives
 
-Provide a reliable and deployable solution using a structured leaf image dataset.
+- Develop a CNN-based image classification model to detect diseases on apple leaves.
+- Classify apple leaf images into three classes: **Healthy**, **Powdery Mildew**, and **Rust**.
+- Provide a reliable and deployable solution using a structured leaf image dataset.
 
-🌱 Benefits
-✅ For Farmers
-Enables early detection of leaf diseases, allowing quicker responses to prevent spread and damage.
+---
 
-✅ For Agriculture Sector
-Supports smart farming practices, improves crop management, and contributes to better agricultural productivity.
+## 🌱 Benefits
 
-🗂️ Dataset
-The dataset used in this project is publicly available on Kaggle:
-🔗 Plant Disease Recognition Dataset
+### ✅ For Farmers
+- Enables early detection of leaf diseases, allowing quicker responses to prevent spread and damage.
 
-🧠 Model Architecture & Code Overview
-🔧 Step-by-Step Implementation
-Mount Google Drive
+### ✅ For Agriculture Sector
+- Supports smart farming practices.
+- Improves crop management.
+- Contributes to better agricultural productivity.
 
-To load the dataset and save the trained model.
+---
 
-Count Dataset Images
+## 🗂️ Dataset
 
-Ensures image distribution is correct across train, test, and validation sets.
+The dataset used in this project is publicly available on Kaggle:  
+🔗 [Plant Disease Recognition Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease)
 
-Visualize Sample Images
+---
 
-Displays random leaf images to verify data quality.
+## 🧠 Model Architecture & Code Overview
 
-Preprocessing with ImageDataGenerator
+### 🔧 Step-by-Step Implementation
 
-Augmentation: Random rotation, zoom, flipping to increase diversity.
+1. **Mount Google Drive**  
+   - Load dataset and save trained model.
 
-Rescaling: Normalize pixel values to [0, 1].
+2. **Count Dataset Images**  
+   - Ensure proper image distribution across training, validation, and test sets.
 
-Create Data Generators
+3. **Visualize Sample Images**  
+   - Display random leaf images to verify data quality.
 
-Loads images in batches directly from folders for training and validation.
+4. **Preprocessing with `ImageDataGenerator`**  
+   - **Augmentation:** Random rotation, zoom, and flipping.  
+   - **Rescaling:** Normalize pixel values to `[0, 1]`.
 
-Build CNN Architecture
+5. **Create Data Generators**  
+   - Load images in batches for training and validation.
 
-Layers used:
+6. **Build CNN Architecture**  
+   - `Conv2D`, `MaxPooling2D`, `Flatten`, `Dense` with `softmax`.
 
-Conv2D (feature extraction)
+7. **Compile the Model**  
+   - **Loss:** `categorical_crossentropy`  
+   - **Optimizer:** `adam`  
+   - **Metric:** `accuracy`
 
-MaxPooling2D (dimensionality reduction)
+8. **Train the Model**  
+   - Train for 25 epochs.
 
-Flatten (convert 2D to 1D)
+9. **Show Final Accuracy**  
+   - Display training and validation accuracy.
 
-Dense (fully connected layers with softmax for multi-class output)
+10. **Visualize Accuracy Graph**  
+    - Plot accuracy vs. epochs to monitor overfitting.
 
-Compile the Model
+11. **Save Model**  
+    - Save as `.h5` file.
 
-Loss: categorical_crossentropy
+12. **Predict New Image**  
+    - Preprocess external image and predict class.
 
-Optimizer: adam
+13. **Decode Prediction**  
+    - Convert class index to readable label.
 
-Metric: accuracy
+14. **Convert to TensorFlow Lite**  
+    - Convert model to `.tflite` for mobile deployment.
 
-Train the Model
+---
 
-Trained for 25 epochs using training and validation sets.
+## 📈 Model Output & Mobile Integration
 
-Show Final Accuracy
+### ✅ Final Accuracy
+- **Training Accuracy:** ~94%  
+- **Validation Accuracy:** ~92%
 
-Printed final training and validation accuracy after training completes.
+### 📉 Accuracy Graph
+Displays training and validation accuracy over 25 epochs.  
+📍 *(You can add `accuracy_plot.png` to your repository for reference)*
 
-Visualize Accuracy Graph
+### 📲 Mobile Deployment
+The trained model was successfully converted into **TensorFlow Lite** format and integrated into an Android application using **Android Studio (Kotlin)**.
 
-Accuracy vs. Epochs chart helps monitor learning progress and detect overfitting.
+- `MainActivity.kt`: Handles image loading, preprocessing, and prediction.
+- `MainActivity.xml`: Provides UI to upload a leaf image and display prediction.
 
-Save Model
+### 📸 Mobile App UI Examples
 
-Stored in .h5 format for reuse or deployment.
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/4ef9ec6b-820c-4707-9089-17d8e9c12d35" width="200"/>
+  <img src="https://github.com/user-attachments/assets/b4d5a275-6601-49d2-8eb1-7d937a651a16" width="200"/>
+  <img src="https://github.com/user-attachments/assets/15243b01-8737-4e3d-9011-fd46397e6af3" width="200"/>
+  <img src="https://github.com/user-attachments/assets/c49d6bb7-555e-4235-ade7-d12d0f7de1ca" width="200"/>
+</div>
 
-Predict New Image
+---
 
-Preprocess external image and predict class using the trained model.
+## 🔍 Challenges & Observations
 
-Decode Prediction
+### 🧪 Image Quality Test
+Tested the model by introducing 20 blurry/noisy apple leaf images into the training set.
 
-Maps predicted class index to human-readable labels.
+### ✅ Result:
+- Model remained robust.
+- Maintained high accuracy (~94% training, ~92% validation).
+- Demonstrated good generalization.
 
-Convert to TensorFlow Lite
+---
 
-Converts model to .tflite for mobile use.
+## ✅ Conclusion
 
-📈 Model Output & Mobile Integration
-✅ Final Accuracy
-Training Accuracy: ~94%
+This project demonstrates the successful application of **CNNs** for classifying apple leaf diseases. The system is:
 
-Validation Accuracy: ~92%
+- ✅ Accurate  
+- ✅ Efficient  
+- ✅ Mobile-friendly via TensorFlow Lite  
+- ✅ Practical for real-time field use by farmers
 
-📉 Accuracy Graph
-Displays training and validation accuracy over 25 epochs:
-📍 (Sample graph accuracy_plot.png can be added to your repo)
+---
 
-📲 Mobile Deployment
-The trained model was successfully converted into TensorFlow Lite format and integrated into an Android application using Android Studio (Kotlin).
+## 🚀 Technologies Used
 
-🔹 MainActivity.kt
-Handles image loading, preprocessing, and prediction.
+- Python 🐍  
+- TensorFlow / Keras  
+- CNN (Convolutional Neural Networks)  
+- NumPy, Pandas, Matplotlib  
+- Google Colab  
+- TensorFlow Lite  
+- Android Studio (Kotlin)  
 
+---
 
-
-🔹 MainActivity.xml
-Provides a simple interface to upload a leaf image and display the prediction.
-
-
-
-📸 Mobile App UI Examples
-<div align="center"> <img src="https://github.com/user-attachments/assets/4ef9ec6b-820c-4707-9089-17d8e9c12d35" width="200"/> <img src="https://github.com/user-attachments/assets/b4d5a275-6601-49d2-8eb1-7d937a651a16" width="200"/> <img src="https://github.com/user-attachments/assets/15243b01-8737-4e3d-9011-fd46397e6af3" width="200"/> <img src="https://github.com/user-attachments/assets/c49d6bb7-555e-4235-ade7-d12d0f7de1ca" width="200"/> </div>
-🔍 Challenges & Observations
-🧪 Image Quality Test
-Introduced 20 blurry or noisy apple leaf images into the training set.
-
-✅ Result:
-The model remained robust and achieved high accuracy (~94% training, ~92% validation), showing good generalization.
-
-✅ Conclusion
-This project demonstrates the successful application of Convolutional Neural Networks (CNNs) for classifying apple leaf diseases. The system is accurate, efficient, and adaptable for mobile deployment via TensorFlow Lite and Android Studio — making it a practical solution for real-time field use by farmers.
-
-🚀 Technologies Used
-Python 🐍
-
-TensorFlow / Keras
-
-Convolutional Neural Network (CNN)
-
-NumPy, Pandas, Matplotlib
-
-Google Colab
-
-TensorFlow Lite
-
-Android Studio (Kotlin)
-
-Made with ❤️ by Nurul Hizmar Khanza
-Politeknik Caltex Riau — 2025
-
+**Made with ❤️ by Nurul Hizmar Khanza**  
+*Politeknik Caltex Riau — 2025*
